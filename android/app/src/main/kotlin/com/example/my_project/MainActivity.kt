@@ -1,4 +1,4 @@
-package com.mycompany.recovermycar
+package com.mycompany.realtimetracking
 
 import io.flutter.embedding.android.FlutterActivity
 
