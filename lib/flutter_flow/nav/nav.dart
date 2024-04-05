@@ -29,127 +29,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => const SearchMainWidget(),
+      errorBuilder: (context, state) => const HomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => const SearchMainWidget(),
+          builder: (context, _) => const HomePageWidget(),
         ),
         FFRoute(
-          name: 'Search_main',
-          path: '/searchMain',
-          builder: (context, params) => const SearchMainWidget(),
-        ),
-        FFRoute(
-          name: 'Search_pro',
-          path: '/searchPro',
-          builder: (context, params) => const SearchProWidget(),
-        ),
-        FFRoute(
-          name: 'Offer_pickup',
-          path: '/offerPickup',
-          builder: (context, params) => const OfferPickupWidget(),
-        ),
-        FFRoute(
-          name: 'Offer_dropoff',
-          path: '/offerDropoff',
-          builder: (context, params) => const OfferDropoffWidget(),
-        ),
-        FFRoute(
-          name: 'Offer_vehicle_1',
-          path: '/offerVehicle1',
-          builder: (context, params) => const OfferVehicle1Widget(),
-        ),
-        FFRoute(
-          name: 'Offer_vehicle_2',
-          path: '/offerVehicle2',
-          builder: (context, params) => const OfferVehicle2Widget(),
-        ),
-        FFRoute(
-          name: 'Offer_vehicle_3',
-          path: '/offerVehicle3',
-          builder: (context, params) => const OfferVehicle3Widget(),
-        ),
-        FFRoute(
-          name: 'Network_1',
-          path: '/network1',
-          builder: (context, params) => const Network1Widget(),
-        ),
-        FFRoute(
-          name: 'Network_tryinvite',
-          path: '/networkTryinvite',
-          builder: (context, params) => const NetworkTryinviteWidget(),
-        ),
-        FFRoute(
-          name: 'Network_detail',
-          path: '/networkDetail',
-          builder: (context, params) => const NetworkDetailWidget(),
-        ),
-        FFRoute(
-          name: 'Setting_QR',
-          path: '/settingQR',
-          builder: (context, params) => const SettingQRWidget(),
-        ),
-        FFRoute(
-          name: 'Setting_Main',
-          path: '/settingMain',
-          builder: (context, params) => const SettingMainWidget(),
-        ),
-        FFRoute(
-          name: 'Setting_Edit_profile',
-          path: '/settingEditProfile',
-          builder: (context, params) => const SettingEditProfileWidget(),
-        ),
-        FFRoute(
-          name: 'Entry_page',
-          path: '/entryPage',
-          builder: (context, params) => const EntryPageWidget(),
-        ),
-        FFRoute(
-          name: 'Recoveryman_dashboard',
-          path: '/recoverymanDashboard',
-          builder: (context, params) => const RecoverymanDashboardWidget(),
-        ),
-        FFRoute(
-          name: 'Login',
-          path: '/login',
-          builder: (context, params) => const LoginWidget(),
-        ),
-        FFRoute(
-          name: 'SignUp',
-          path: '/signUp',
-          builder: (context, params) => const SignUpWidget(),
-        ),
-        FFRoute(
-          name: 'select_location',
-          path: '/selectLocation',
-          builder: (context, params) => const SelectLocationWidget(),
-        ),
-        FFRoute(
-          name: 'select_vehicle_details',
-          path: '/selectVehicleDetails',
-          builder: (context, params) => const SelectVehicleDetailsWidget(),
-        ),
-        FFRoute(
-          name: 'select_client_details',
-          path: '/selectClientDetails',
-          builder: (context, params) => const SelectClientDetailsWidget(),
-        ),
-        FFRoute(
-          name: 'pickup_date',
-          path: '/pickupDate',
-          builder: (context, params) => const PickupDateWidget(),
-        ),
-        FFRoute(
-          name: 'MyJobs',
-          path: '/myJobs',
-          builder: (context, params) => const MyJobsWidget(),
-        ),
-        FFRoute(
-          name: 'Job_Details',
-          path: '/jobDetails',
-          builder: (context, params) => const JobDetailsWidget(),
+          name: 'HomePage',
+          path: '/homePage',
+          builder: (context, params) => const HomePageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
